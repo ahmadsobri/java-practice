@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa3cfe33-c59a-406b-93c6-56790a27c829" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_0_alpha1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/db-connection-pool.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/src/main/java/com/java/dbcp/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/src/main/java/com/java/hikaricp/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/db-connection-pool/src/main/resources/hikaricp.conf.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/multi-thread.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/MultiThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/SingleThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/ThreadOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/ThreadSync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/ThreadTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../24-03-2021/multi-thread/src/ThreadWaitAndNotify.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="hibernate-configuration-5.2" />
+        <option value="hibernate-main-5.2" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1q8ehFWR003GqY4xDjvmTqVW6rh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java-practice\23-03-2021\accessing-db-mysql\src\main\java\com\java\hibernate\entities" />
+      <recent name="D:\java-practice\23-03-2021\accessing-db-mysql\src\main\java\com\java\jpa" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App (2)">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.jpa.App" />
+      <module name="accessing-db-mysql" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java.jpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.hibernate.App" />
+      <module name="accessing-db-mysql" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.jdbc.App" />
+      <module name="accessing-db-mysql" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App (2)" />
+        <item itemvalue="Application.App (1)" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa3cfe33-c59a-406b-93c6-56790a27c829" name="Default Changelist" comment="" />
+      <created>1616465764796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616465764796</updated>
+      <workItem from="1616465766048" duration="322000" />
+      <workItem from="1616466168763" duration="31367000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
