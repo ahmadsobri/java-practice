@@ -1,12 +1,12 @@
-package rpcstyle;
+package docstyle;
 
 import javax.jws.WebService;
 
 @WebService(
         portName = "HelloInterface",
         serviceName = "MyHelloService",
-        targetNamespace = "http://localhost:8181/wsdl",
-        endpointInterface = "rpcstyle.HelloInterface"
+        targetNamespace = "http://localhost:8282/wsdl",
+        endpointInterface = "docstyle.HelloInterface"
 )
 public class HelloService implements HelloInterface {
     @Override
