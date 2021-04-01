@@ -1,2 +1,6 @@
 heloo
+<<<<<<< HEAD
 update newfile.tx from local
+=======
+on the spot update
+>>>>>>> 1471f91ce067b4d2bba8e716e4dec7318bbe8209
