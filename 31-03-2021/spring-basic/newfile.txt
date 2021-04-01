@@ -1,3 +1,4 @@
 heloo
 update newfile.tx from local
 on the spot update
+update lagi from local v.1.2
