@@ -43,7 +43,7 @@ public class AuthorController {
     }
 
     @GetMapping("/get-author/{id}")
-    public Author findByIdAuthor(@RequestParam(value = "id") int id_author){
+    public Author findByIdAuthor(@PathVariable(name="id") int id_author){
         Author result = this.authors.stream().filter(c -> id_author ==c.getId())
                 .findAny()
                 .orElse(null);
