@@ -32,10 +32,12 @@ public class RestApiService {
         ResponseEntity<Employee> response = restTemplate.getForEntity(uri, Employee.class);
         return response;
     }
+    
+    
 
 
     //Sending HTTP Headers using RestTemplate
-    private static void getEmployeesWithHeader() {
+    public void getEmployeesWithHeader() {
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
@@ -51,7 +53,7 @@ public class RestApiService {
     }
 
     //Sending URL Parameters using RestTemplate
-    private static void getEmployeeById() {
+    public void getEmployeeById() {
         RestTemplate restTemplate = new RestTemplate();
 
         Map<String, String> params = new HashMap<String, String>();
@@ -63,11 +65,11 @@ public class RestApiService {
     }
 
     //RestTemplate to access HTTP POST api requests.
-    private static void createEmployee() {
+    public void createEmployee(Employee newEmployee) {
         final String uri = "http://localhost:8080/springrestexample/employees";
         RestTemplate restTemplate = new RestTemplate();
 
-        Employee newEmployee = new Employee(1, "Adam", "Gilly", "test@email.com");
+        //Employee newEmployee = new Employee(1, "Adam", "Gilly", "test@email.com");
 
         Employee result = restTemplate.postForObject(uri, newEmployee, Employee.class);
 
@@ -75,20 +77,20 @@ public class RestApiService {
     }
 
     //RestTemplate example to consume PUT API
-    private static void updateEmployee() {
-        final String uri = "http://localhost:8080/springrestexample/employees/{id}";
+    public void updateEmployee(Employee updatedEmployee) {
+        //final String uri = "http://localhost:8080/springrestexample/employees/{id}";
         RestTemplate restTemplate = new RestTemplate();
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("id", "2");
 
-        Employee updatedEmployee = new Employee(2, "New Name", "Gilly", "test@email.com");
+        //Employee updatedEmployee = new Employee(2, "New Name", "Gilly", "test@email.com");
 
         restTemplate.put ( uri, updatedEmployee, params );
     }
 
     //RestTemplate example to consume DELETE API
-    private static void deleteEmployee()
+    public void deleteEmployee()
     {
         RestTemplate restTemplate = new RestTemplate();
 

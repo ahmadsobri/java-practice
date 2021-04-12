@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
 
 @RestController
 public class RestApiController {
@@ -20,10 +23,18 @@ public class RestApiController {
     }
 
     @PostMapping(value = "/employees")
-    public ResponseEntity<Employee> getEmployee(@RequestBody Employee employee) {
+    public ResponseEntity<String> addEmployee(@RequestBody Employee employee) {
+        restApiService.createEmployee(employee);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(employee.getId())
+                .toUri();
+        return  ResponseEntity.created(location).build();
     }
 
-    @GetMapping(value = "/employees")
-    public ResponseEntity<Employee> getEmployee(@PathVariable("id") int id, Employee employee) {
+    @PutMapping(value = "/employees")
+    public ResponseEntity<Employee> updateEmployee(@RequestBody Employee employee) {
+        restApiService.updateEmployee(employee);
+        return new ResponseEntity<Employee>(employee, HttpStatus.OK);
     }
 }
