@@ -1,6 +1,10 @@
 package com.example.hitapi;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+
+    private static final long serialVersionUID = -4009390038255794274L;
     private int id;
     private String first_name;
     private String last_name;
