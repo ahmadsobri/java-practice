@@ -36,11 +36,11 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 	- for inject component/interface if use
 	
 @Qualifier (used on @Autowired annotation place)\
-	- for qualify/choose the specific interface that want to inject (i.g : one interface implemented in multiple class)
+	- for qualify/choose the specific interface that want to inject (e.g : one interface implemented in multiple class)
 
 @ConditionalOnProperty(prefix = "config", name = "enable-prod", havingValue = "true")\
 	- for enable/disable class/component with custom remak in application.properties, \
-	- i.g: by asign true/false to change prod/dev mode : "config.enable-prod=true"
+	- e.g: by asign true/false to change prod/dev mode : "config.enable-prod=true"
 
 @Controller(manual custom) / @RestController (include RequestMapping, ResponseBody)\
 	- layer for handle request and response from http client
@@ -67,16 +67,19 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 
 @Valid \
 	- for enable validation has been set in property of model/class:\
-	- i.g : @valid ClassModel classA
+	- e.g : @valid ClassModel classA
 
 
 
 Design Pattern :
 
+Creation Pattern\
+
 1. Builder \
 	not use keyword new, but build(): create inner class Builder, with..() method return this, add method builld pass value to man class of it\
 	example :\
 		Class A = ClassA.builder().withId().withName().build();
+		
 		
 2. Factory\
 	create abstract class, extends a class factory to it, in main class instance single factory class, call specific object by param value\
@@ -84,6 +87,7 @@ Design Pattern :
 		Factory factory = new Factory();\
 		ClassA a = factory.getFactory("A");\
 		ClassB b = factory.getFactory("B");
+		
 		
 3. Singleton (single object/address in memmory) : reduce memmory\
 	create default constructor, create a static property with type of this class, create method that return this class.\
@@ -93,6 +97,7 @@ Design Pattern :
 		ClassB b = Singleton.getInstance();\
 		a.setText("A"); // print A\
 		b.setText("B"); // print A
+		
 		
 4. Prototype (different object/address in memmory with clone value) : verry costly to instance\
 	not use keyword new, but clone(): create a class that implement Cloneable (java builtin class), create method clone() with type this class.\
@@ -111,3 +116,80 @@ Design Pattern :
 		ClassA A2 = (ClassA) abstarct.create();\		
 		abstarct.checkOut(A1);\
 		abstarct.checkIn(B1);
+
+Structural Pattern\		
+
+		
+6. Adapter\
+	for adaption old structure of the service/class to the new, then assign new obj to old service/class if needed\
+	once not possible to modify old service/class, because can introduce the new bug/issue.\
+	example :\
+		OldService{}\
+		NewService{\
+			NewService(OldClass, NewClass){}\
+		}\
+		OldService.toDo(NewService.getA());
+
+	
+7. Bridge\
+	is interface and abstarct class that minimize multiple instance of object.\
+	example :\
+		abstarct Store{ abstarct Colour getColour(); }\
+		Red impl Colour{}\
+		Bag ext Store{ Bag(Colour); }\
+		new Bag(new Red())
+
+
+8. Composite\
+	using interface as type of object to be casting in specific class that implement this iterface. (to tree data structure)\
+	example :\
+		ClassA impl Color{}; ClassB impl Color{}\
+		Process {\
+			Process(Color color);\
+		}\
+		new Process((ClassA) color)\
+		new Process((ClassB) color)
+
+	
+9. Decorator
+	for decoration the interface using abstract class. Interface as main reference that complete by abstarct class
+	example :
+		Car imp Machine{}; Navigation imp Machine{}; Parking imp Machine{}
+		abstract Decorator impl Machine {
+			toDo()->return Machine.toDo()
+		}
+		Machine mch = Decorator(Navigation(Parking(Car())))
+
+
+10. Flyweight\
+	reduce duplicate value on save to model for optimize object created during runtime (increase perform)\
+	dont mix key and value that will be save, save value if it different another (key(value), value(value))\
+	mapping index(key) to object value it. "no duplicate obj value, but mapping to another object"\
+	example :\
+		A.create(1, obj){\
+			X x = Q.getobj(obj); // add(check if is not available on list) and return obj by key(this value)\
+			Y y = T.mapobj(1,x); // mapping key/index to this obj value\
+		}
+
+
+11. Proxy\
+	to handle scurity, manipulation layer request, \
+	not call directly to main service, but override the service interface to another class, then do validation/checking process, if ok then call main service\
+	example :\
+		ProxyService impl Iservice{\
+			void toDO(){\
+				...//handle validation\
+				if(true)->MainService.toDo();\
+			}\
+		}
+
+12. Facade\
+	If You have a very complex application, and your objective is to hide the complexities from the client.\
+	Example :\
+	Computer imp Machine{}; Robot imp Machine{}\
+	Facade {\
+		toDoComputer(){ Computer.toDo() }\
+		toDoRobot(){ Robot.toDO() }\
+	}\
+	Facade.toDoComputer(); Facade.toDoRobot();
+	
