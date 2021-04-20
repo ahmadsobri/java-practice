@@ -1,7 +1,7 @@
 Spring Java Annotation :\
 https://dzone.com/articles/a-guide-to-spring-framework-annotations
 
-#Spring Annotation
+# Spring Annotation
 
 **@Component**\
 	- for marks the class as a bean or component \
@@ -72,13 +72,13 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 
 
 
-#Design Pattern
+# Design Pattern
 
-##Creation Pattern\
+## Creation Pattern
 
 1. **Builder** \
 	not use keyword new, but build(): create inner class Builder, with..() method return this, add method builld pass value to man class of it\
-	example :\
+	example :
 	```
 		Class A = ClassA.builder().withId().withName().build();
 	```
@@ -86,20 +86,20 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 		
 2. **Factory**\
 	create abstract class, extends a class factory to it, in main class instance single factory class, call specific object by param value\
-	example :\
+	example :
 	```
-		Factory factory = new Factory();\
-		ClassA a = factory.getFactory("A");\
+		Factory factory = new Factory();
+		ClassA a = factory.getFactory("A");
 		ClassB b = factory.getFactory("B");
 	```
 		
 3. **Singleton** (single object/address in memmory) : reduce memmory\
 	create default constructor, create a static property with type of this class, create method that return this class.\
 	In this method check if instance is null then create new, else return instance. (class will just only one instance for reduce memmory)\
-	example :\
+	example :
 	```
-		ClassA a = Singleton.getInstance();\
-		ClassB b = Singleton.getInstance();\
+		ClassA a = Singleton.getInstance();
+		ClassB b = Singleton.getInstance();
 		a.setText("A"); // print A\
 		b.setText("B"); // print A
 	```
@@ -107,9 +107,9 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 4. **Prototype** (different object/address in memmory with clone value) : verry costly to instance\
 	not use keyword new, but clone(): create a class that implement Cloneable (java builtin class), create method clone() with type this class.\
 	In this method return (this class) super.clone() "with casting, dont forget use try cath exception"\
-	example :\
+	example :
 	```
-	ClassA A1 = new ClassA("A1"); //return A1\
+	ClassA A1 = new ClassA("A1"); //return A1
 	ClassA A1Clone = A1.clone(); // return A1
 	```
 		
@@ -117,50 +117,50 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 5. **Object Pool**\
 	a dynamic Object data type (T Generic type), create abstarct class<T>, int this class declare/initialize method with generic object (T).\
 	Create class that extends abstarct class, override that you need method.\
-	example :\
+	example :
 	```
-		Abstract abstarct = new ClassImp();\
-		ClassA A1 = (ClassA) abstarct.create();\
-		ClassA A2 = (ClassA) abstarct.create();\		
-		abstarct.checkOut(A1);\
+		Abstract abstarct = new ClassImp();
+		ClassA A1 = (ClassA) abstarct.create();
+		ClassA A2 = (ClassA) abstarct.create();		
+		abstarct.checkOut(A1);
 		abstarct.checkIn(B1);
 	```
 
-##Structural Pattern\		
+## Structural Pattern
 
 		
 6. **Adapter**\
 	for adaption old structure of the service/class to the new, then assign new obj to old service/class if needed\
 	once not possible to modify old service/class, because can introduce the new bug/issue.\
-	example :\
+	example :
 	```
-		OldService{}\
-		NewService{\
-			NewService(OldClass, NewClass){}\
-		}\
+		OldService{}
+		NewService{
+			NewService(OldClass, NewClass){}
+		}
 		OldService.toDo(NewService.getA());
 	```
 	
 	
 7. **Bridge**\
 	is interface and abstarct class that minimize multiple instance of object.\
-	example :\
+	example :
 	```
-		abstarct Store{ abstarct Colour getColour(); }\
-		Red impl Colour{}\
-		Bag ext Store{ Bag(Colour); }\
+		abstarct Store{ abstarct Colour getColour(); }
+		Red impl Colour{}
+		Bag ext Store{ Bag(Colour); }
 		new Bag(new Red())
 	```
 
 8. **Composite**\
 	using interface as type of object to be casting in specific class that implement this iterface. (to tree data structure)\
-	example :\
+	example :
 	```
-		ClassA impl Color{}; ClassB impl Color{}\
-		Process {\
-			Process(Color color);\
-		}\
-		new Process((ClassA) color)\
+		ClassA impl Color{}; ClassB impl Color{}
+		Process {
+			Process(Color color);
+		}
+		new Process((ClassA) color)
 		new Process((ClassB) color)
 	```
 	
@@ -182,11 +182,11 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 	reduce duplicate value on save to model for optimize object created during runtime (increase perform)\
 	dont mix key and value that will be save, save value if it different another (key(value), value(value))\
 	mapping index(key) to object value it. "no duplicate obj value, but mapping to another object"\
-	example :\
+	example :
 	```
-		A.create(1, obj){\
-			X x = Q.getobj(obj); // add(check if is not available on list) and return obj by key(this value)\
-			Y y = T.mapobj(1,x); // mapping key/index to this obj value\
+		A.create(1, obj){
+			X x = Q.getobj(obj); // add(check if is not available on list) and return obj by key(this value)
+			Y y = T.mapobj(1,x); // mapping key/index to this obj value
 		}
 	```
 
@@ -195,24 +195,24 @@ https://dzone.com/articles/a-guide-to-spring-framework-annotations
 	not call directly to main service, but override the service interface to another class, then do validation/checking process, if ok then call main service\
 	example :\
 	```
-		ProxyService impl Iservice{\
-			void toDO(){\
-				...//handle validation\
-				if(true)->MainService.toDo();\
-			}\
+		ProxyService impl Iservice{
+			void toDO(){
+				...//handle validation
+				if(true)->MainService.toDo();
+			}
 		}
 	```
 		
 12. **Facade**\
 	If You have a very complex application, and your objective is to hide the complexities from the client.\
-	Example :\
+	Example :
 	```
 	Computer imp Machine{}; 
-	Robot imp Machine{}\
-	Facade {\
-		toDoComputer(){ Computer.toDo() }\
-		toDoRobot(){ Robot.toDO() }\
-	}\
+	Robot imp Machine{}
+	Facade {
+		toDoComputer(){ Computer.toDo() }
+		toDoRobot(){ Robot.toDO() }
+	}
 	Facade.toDoComputer(); Facade.toDoRobot();
 	```
 	
